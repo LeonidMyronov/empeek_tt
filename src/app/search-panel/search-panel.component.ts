@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import {NgForm} from "@angular/forms";
+import {ItemServiceService} from "../core/item-service.service";
+import {Item} from "../items/item.model";
 
 @Component({
   selector: 'app-search-panel',
@@ -7,9 +10,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPanelComponent implements OnInit {
 
-  constructor() { }
+  constructor(private itemService: ItemServiceService) { }
 
   ngOnInit() {
   }
 
+  onSubmit(searchForm: NgForm) {
+    this.itemService.addItem(new Item(searchForm.controls.itemName.value))
+  }
 }

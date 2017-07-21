@@ -1,0 +1,17 @@
+.items-wrapper{
+    padding: 20px 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+}
+.items-wrapper:last-of-type{
+    /*border-bottom: none;*/
+}
+
+.item{
+    display: inline-block;
+    padding: 6px 10px;
+}
+
+.btn{
+    float: right;
+}

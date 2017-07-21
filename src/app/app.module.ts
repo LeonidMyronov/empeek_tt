@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ItemServiceService } from "./core/item-service.service";
 import { HeaderComponent } from './header/header.component';
 import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemComponent } from './items/item/item.component';
@@ -24,7 +25,7 @@ import { StartItemComponent } from './items/start-item/start-item.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ItemServiceService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

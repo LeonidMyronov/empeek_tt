@@ -1,3 +1,16 @@
-<p>
-  item works!
-</p>
+<div class="comments" *ngIf="isItemSelected; else noItem">
+  <h2>comments #{{ itemIndex + 1 }}</h2>
+  <div class="comment-wrapper" *ngFor="let comment of item.comments">
+    <div class="comment">
+      {{ comment.comment }}
+    </div>
+  </div>
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <div class="form-group">
+      <input type="text" class="form-control" placeholder="Type comment here..." ngModel name="comment">
+    </div>
+  </form>
+</div>
+<ng-template #noItem>
+  <h2>Please, select item to view Comments</h2>
+</ng-template>
