@@ -11,6 +11,7 @@ import { ItemComponent } from './items/item/item.component';
 import { SearchPanelComponent } from './search-panel/search-panel.component';
 import { StartItemComponent } from './items/start-item/start-item.component';
 import {AppRoutingComponent} from "./app-routing.module";
+import {UserSessionService} from "./core/user-session.service";
 
 @NgModule({
   declarations: [
@@ -27,7 +28,7 @@ import {AppRoutingComponent} from "./app-routing.module";
     HttpModule,
     AppRoutingComponent
   ],
-  providers: [ItemServiceService],
+  providers: [ItemServiceService, UserSessionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

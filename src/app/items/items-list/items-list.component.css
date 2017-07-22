@@ -3,8 +3,8 @@
     border-bottom: 1px solid #eee;
     cursor: pointer;
 }
-.items-wrapper:last-of-type{
-    /*border-bottom: none;*/
+.items-wrapper:hover{
+    background-color: #ddd;
 }
 .items-wrapper.active {
     border-left: 4px solid deeppink ;

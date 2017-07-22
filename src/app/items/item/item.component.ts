@@ -30,10 +30,7 @@ export class ItemComponent implements OnInit, OnDestroy {
 
     this.deletedIndexSubscription = this.itemService.deletedIndex.subscribe(
         (index: number) => {
-          // if(index == this.itemIndex) {
-            console.log('my index deleted', index, this.itemIndex);
             this.isItemSelected = false;
-          // }
         }
     );
 

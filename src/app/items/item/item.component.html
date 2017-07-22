@@ -1,5 +1,5 @@
 <div class="comments" *ngIf="isItemSelected; else noItem">
-  <h2>comments #{{ itemIndex + 1 }}</h2>
+  <h2>comments #{{ item.name }}#</h2>
   <div class="comment-wrapper" *ngFor="let comment of item.comments">
     <div class="comment">
       <div class="comment-logo" [ngStyle]="{backgroundColor: comment.color}"></div>
