@@ -15,7 +15,7 @@ export class ItemComponent implements OnInit, OnDestroy {
   private deletedIndexSubscription: Subscription;
   private updatingItemSubscription: Subscription;
   private item: Item;
-  private isItemSelected: Boolean = false;
+  public isItemSelected: Boolean = false;
   private itemIndex: number;
   constructor(private itemService: ItemServiceService) { }
 
