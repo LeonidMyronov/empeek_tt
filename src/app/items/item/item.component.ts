@@ -22,27 +22,25 @@ export class ItemComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.selectedIndexSubscription = this.itemService.selectedIndex.subscribe(
         (index: number) => {
-          console.log(index);
           this.isItemSelected = true;
           this.itemIndex = index;
           this.item = this.itemService.getItemByIndex(this.itemIndex);
-          console.log(this.item);
         }
     );
 
     this.deletedIndexSubscription = this.itemService.deletedIndex.subscribe(
         (index: number) => {
-          if(index == this.itemIndex) {
-            console.log('my index deleted');
+          // if(index == this.itemIndex) {
+            console.log('my index deleted', index, this.itemIndex);
             this.isItemSelected = false;
-          }
+          // }
         }
     );
 
   }
 
   onSubmit(form: NgForm) {
-    console.log(form.controls.comment.value);
+    if(!form.valid) return;
     this.itemService.addCommentToItem(this.itemIndex, new Comment(form.controls.comment.value));
     form.reset();
   }

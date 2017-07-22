@@ -1,17 +1,13 @@
 <div class="container">
   <div class="row">
     <div class="col-sm-2">
-      <h2>
-        {{ 'main' }}
-      </h2>
+      <div class="header-wrapper">
+        <h2>Main</h2>
+        <app-header></app-header>
+      </div>
     </div>
-    <div class="col-sm-5">
-      <h2>items</h2>
-      <app-items-list></app-items-list>
-    </div>
-    <div class="col-sm-5">
-      <app-item></app-item>
-
+    <div class="col-sm-10">
+      <router-outlet></router-outlet>
     </div>
   </div>
 </div>

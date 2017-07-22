@@ -1,6 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
+.container {
+    padding: 20px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.color-info{
+    background-color: #4ecccc;
+    color: #fff;
+}
+
+.color-danger {
+    border: 2px solid deeppink;
+    color: deeppink;
+}
+
+.gray-bg {
+    background-color: #ccc;
+}
+
+.badge {
+    margin-left: 10px;
+}
+
 h2 {
     font-size: 30px;
     text-transform: capitalize;
     padding: 20px;
+    color: #999;
+    margin: 0;
+}
+
+
+.header-wrapper {
+    background-color: #040452;
+}
+
+header {
+    height: 100vh;
+    margin-top: 40px;
+}
+
+header li {
+    padding: 10px 0;
+    color: #fff;
+    text-align: center;
+}
+
+header li a {
+    color: #fff;
+    transition: transform .5s;
+    transform: scale(1);
+    display: block;
+}
+
+
+header li a:hover {
+    text-decoration: none !important;
+    color: white;
+    transform: scale(1.2);
+
+}
+
+section {
+    padding: 20px;
+    border: 2px solid #ccc;
+    box-shadow: 2px 2px 5px #333;
+}
+
+header li.active {
+    background-color: deeppink;
+}
+
+.comment-wrapper {
+    position: relative;
+    border-bottom: 1px solid #eee;
+}
+
+.comment-wrapper:last-of-type {
+    border-bottom: none;
+}
+
+.comment {
+    padding: 20px 10px 20px 60px;
+}
+
+.comments-form {
+    margin-top: 20px;
+    position: relative;
+}
+
+.comments-form input {
+    margin-left: 60px;
+    width: 85%;
+}
+
+.comments-form .comment-logo {
+    top: 0;
+}
+
+.comment-logo {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 40px;
+    top: 20px;
+    left: 0;
 }

@@ -10,6 +10,7 @@ import { ItemsListComponent } from './items/items-list/items-list.component';
 import { ItemComponent } from './items/item/item.component';
 import { SearchPanelComponent } from './search-panel/search-panel.component';
 import { StartItemComponent } from './items/start-item/start-item.component';
+import {AppRoutingComponent} from "./app-routing.module";
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { StartItemComponent } from './items/start-item/start-item.component';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    AppRoutingComponent
   ],
   providers: [ItemServiceService],
   bootstrap: [AppComponent]

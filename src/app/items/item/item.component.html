@@ -2,14 +2,18 @@
   <h2>comments #{{ itemIndex + 1 }}</h2>
   <div class="comment-wrapper" *ngFor="let comment of item.comments">
     <div class="comment">
+      <div class="comment-logo" [ngStyle]="{backgroundColor: comment.color}"></div>
+      <h4>{{ comment.name }}</h4>
       {{ comment.comment }}
     </div>
   </div>
-  <form (ngSubmit)="onSubmit(form)" #form="ngForm">
+  <form (ngSubmit)="onSubmit(form)" #form="ngForm" class="comments-form">
     <div class="form-group">
-      <input type="text" class="form-control" placeholder="Type comment here..." ngModel name="comment">
+      <div class="comment-logo gray-bg"></div>
+      <input type="text" class="form-control" placeholder="Type comment here..." ngModel name="comment" required>
     </div>
   </form>
+
 </div>
 <ng-template #noItem>
   <h2>Please, select item to view Comments</h2>

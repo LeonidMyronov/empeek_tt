@@ -6,6 +6,10 @@
 .items-wrapper:last-of-type{
     /*border-bottom: none;*/
 }
+.items-wrapper.active {
+    border-left: 4px solid deeppink ;
+
+}
 
 .item{
     display: inline-block;

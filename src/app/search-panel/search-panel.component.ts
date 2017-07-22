@@ -16,6 +16,9 @@ export class SearchPanelComponent implements OnInit {
   }
 
   onSubmit(searchForm: NgForm) {
-    this.itemService.addItem(new Item(searchForm.controls.itemName.value))
+    if(!searchForm.valid) return;
+    this.itemService.addItem(new Item(searchForm.controls.itemName.value));
+    searchForm.reset();
   }
 }
+

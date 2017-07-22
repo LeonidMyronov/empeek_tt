@@ -14,7 +14,10 @@ export class ItemServiceService {
   constructor() {
     this.items = [
         new Item('1 item', [new Comment('comment one'), new Comment('comment two')]),
-        new Item('2 item')
+        new Item('2 item', [new Comment('comment one'), new Comment('comment two'), new Comment('comment three'), new Comment('comment four')]),
+        new Item('3 item'),
+        new Item('4 item'),
+        new Item('5 item'),
     ];
   }
 
@@ -37,9 +40,7 @@ export class ItemServiceService {
   }
 
   deleteItem(index: number) {
-    this.deletedIndex.next(index);
     this.items.splice(index, 1);
-    console.log(index, this.items);
     this.updateItemsList.next(this.getItems());
   }
 

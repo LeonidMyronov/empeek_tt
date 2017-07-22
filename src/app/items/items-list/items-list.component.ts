@@ -10,6 +10,7 @@ import {Subscription} from "rxjs";
 })
 export class ItemsListComponent implements OnInit, OnDestroy {
   private items: Item[];
+  private index: number;
   private itemsSubscription: Subscription;
   constructor(private itemService: ItemServiceService) { }
 
@@ -23,10 +24,20 @@ export class ItemsListComponent implements OnInit, OnDestroy {
   }
 
   onSelectItem(index: number) {
+    this.index = index;
     this.itemService.selectedIndex.next(index);
   }
 
   onDeleteItem(index: number) {
+    if(index < this.index) {
+      this.index--;
+    }
+    else if(index == this.index) {
+      this.itemService.deletedIndex.next(index);
+      this.index = null;
+      console.log(index, this.items);
+
+    }
     this.itemService.deleteItem(index);
   }
 
